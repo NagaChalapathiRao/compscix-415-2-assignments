@@ -22,6 +22,19 @@ unique(country_col)
 region_col <- WorldCities$region
 unique(region_col)
 
+WorldCities %>% select(country) %>% unique()
+
+WorldCities %>% ggplot(aes(x=population)) + geom_histogram()
+
+WorldCities %>% ggplot(aes(x=population)) + geom_histogram() + xlab('City Population')
+
+```
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+
+WorldCities %>% ggplot(aes(x=population)) + geom_histogram() + xlab('Total City Population') + ylab('Total Count') + ggtitle("my title") + theme_bw(base_size = 10, base_family = "") # theme_bw reference http://ggplot2.tidyverse.org/reference/ggtheme.html#examples
+
 ```
 
 ## R Markdown
